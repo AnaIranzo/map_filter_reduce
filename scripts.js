@@ -210,6 +210,9 @@ const books = [
 
 books
 .filter(book => book.category === 'code')
-.reduce((acc, value) => {return acc.price + value.price})
+.reduce((acc, value) => acc + value.price, 0)
+
+// acc no es un objeto, solo acc
+// hay que iniciar el contador ,0
 
 // Resultado --> 60
