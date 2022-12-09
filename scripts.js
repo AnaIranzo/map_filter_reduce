@@ -77,7 +77,7 @@ const staff = [
 
 const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-numbers2.filter(a => a%2 != 0)
+numbers2.filter(a => a % 2 != 0)
 
 // Dado el siguiente array, genera un segundo array que filtre los platos veganos y saque una sentencia como la del ejemplo
 
@@ -127,7 +127,9 @@ const inventory = [
   }
 ];
 
-inventory.filter(item => { if (item.price > 300) {return item.name}})
+inventory
+.filter(item =>  item.price > 300)
+.map(item => item.name)
 
 
 /*
@@ -206,7 +208,8 @@ const books = [
   }
 ];
 
-books.filter(book => { if(book.category === 'code') {return book.price}})
+books
+.filter(book => book.category === 'code')
 .reduce((acc, value) => {return acc.price + value.price})
 
 // Resultado --> 60
